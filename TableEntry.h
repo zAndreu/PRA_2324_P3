@@ -7,8 +7,8 @@
 template <typename V>
 class TableEntry
 {
-private:
-    // miembros privados
+public:
+    // atributos públicos
     std::string key_;
     V value_;
     
@@ -17,11 +17,11 @@ public:
     TableEntry(std::string key, V value) : key_(key), value_(value) {}
     TableEntry(std::string key) : key_(key) {}
     TableEntry() {}
-    friend bool operator==(const TableEntry<V>& te1, const TableEntry<V>& te2)
+    friend bool operator==(const TableEntry<V> &te1, const TableEntry<V> &te2)
     {
         return te1.key_ == te2.key_;
     }
-    friend bool operator!=(const TableEntry<V>& te1, const TableEntry<V>& te2)
+    friend bool operator!=(const TableEntry<V> &te1, const TableEntry<V> &te2)
     {
         return te1.key_ != te2.key_;
     }
