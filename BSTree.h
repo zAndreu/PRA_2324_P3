@@ -143,7 +143,6 @@ public:
 
     friend std::ostream &operator<<(std::ostream &out, const BSTree<T> &bst)
     {
-        out << "BSTree(inorder): ";
         bst.print_inorder(out, bst.root);
         return out;
     }
