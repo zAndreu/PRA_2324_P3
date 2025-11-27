@@ -17,7 +17,7 @@ public:
     friend std::ostream &operator<<(std::ostream &out, const BSNode<T> &bsn)
     {
         out << "BSNode(" << bsn.elem << ")";
-        return out;
+        return (out);
     }
 };
 

@@ -19,16 +19,22 @@ public:
     TableEntry() {}
     friend bool operator==(const TableEntry<V> &te1, const TableEntry<V> &te2)
     {
-        return te1.key_ == te2.key_;
+        return ((te1.key_) == (te2.key_));
     }
     friend bool operator!=(const TableEntry<V> &te1, const TableEntry<V> &te2)
     {
-        return te1.key_ != te2.key_;
+        return ((te1.key_) != (te2.key_));
     }
     friend std::ostream &operator<<(std::ostream &out, const TableEntry<V> &te)
     {
         out << "{" << te.key_ << ", " << te.value_ << "}";
-        return out;
+        return (out);
+    }
+    friend bool operator<(const TableEntry<V> &te1, const TableEntry<V> &te2) {
+        return ((te1.key_) < (te2.key_));
+    }
+    friend bool operator>(const TableEntry<V> &te1, const TableEntry<V> &te2) {
+        return ((te1.key_) > (te2.key_));
     }
 };
 

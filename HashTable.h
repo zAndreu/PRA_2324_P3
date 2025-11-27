@@ -37,7 +37,7 @@ public:
 
     ~HashTable()
     {
-        delete[] table;
+        delete[] (table);
     }
 
     // De Dict.h
@@ -76,7 +76,7 @@ public:
             V val = table[index].get(pos).value_;
             table[index].remove(pos);
             n--;
-            return val;
+            return (val);
         }
         throw std::runtime_error("La clave no existe en la tabla");
     }
@@ -97,7 +97,7 @@ public:
 
     V operator[](const std::string &key)
     {
-        return this->search(key);
+        return (this->search(key));
     }
 };
 
